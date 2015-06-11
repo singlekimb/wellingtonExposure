@@ -1,0 +1,87 @@
+// Place all the styles related to the galleries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	background-image: image-url("background/nightHarbour2.png");
+	background-repeat: no-repeat;
+	background-size: 100%, 100%;
+}
+
+.container {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height:100%;
+}
+
+
+.nav {
+	height: 60px;
+	position: relative;
+	z-index: 3;
+}
+
+.title {
+	font-family:'Trebuchet MS', 'Arial', serif;
+	color: black;
+	font-size: 30px;
+	opacity: 1;
+	float: left;	
+	margin-top: 12px;
+	padding: 0 20px;
+	
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	font-size: 28px;
+	font-family:'Trebuchet MS', 'Arial', serif;
+	opacity: 1;
+	float: right;
+	text-transform: lowercase;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+li {
+	display: inline;
+	position: relative; 
+	padding: 20px;
+	top: 12px;
+}
+
+.colours {
+	left:50%;
+	width: auto;
+	height: 65px;
+	padding: 5px;
+	margin-top: -50px;
+	z-index: 1000;
+}
+
+.colours div {
+	margin: auto;
+	width: 500px;
+}
+
+.button {
+	width: 30px;
+	height: 30px;
+	padding: 15px;
+	display: inline;
+}
+
+.collage {
+	background-color: none;
+}

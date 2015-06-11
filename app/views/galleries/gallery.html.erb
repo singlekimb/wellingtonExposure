@@ -1,0 +1,96 @@
+
+<div class="container">
+      
+      <%= render :partial=>"devise/shared/navbar" %> 
+			
+      <div class="title">
+		<h1>
+		 	Wellington Exposure
+		</h1>
+	  </div>
+        
+  	     
+  	<div class="colours2">
+
+  			<div class="button">
+  				<%= link_to gallery_path("red") do %>
+  					<%= image_tag("buttons/button_red.png",alt:"red",width:"50px",:height=>"50px")%>
+  				<%end%>
+  			</div>
+			
+  			<div class="button">
+  				<%= link_to gallery_path("orange") do %>
+  					<%= image_tag("buttons/button_orange.png",alt:"orange",width:"50px",:height=>"50px")%>
+  				<%end%>
+  			</div>
+			
+  			<div class="button">
+  				<%= link_to gallery_path("yellow") do %>
+  					<%= image_tag("buttons/button_yellow.png",alt:"yellow",width:"50px",:height=>"50px")%>
+  				<%end%>
+  			</div>
+			
+  			<div class="button">
+  				<%= link_to gallery_path("green") do %>
+  					<%= image_tag("buttons/button_green.png",alt:"green",width:"50px",:height=>"50px")%>
+  				<%end%>
+  			</div>
+			
+  			<div class="button">
+  				<%= link_to gallery_path("blue") do %>
+  					<%= image_tag("buttons/button_blue.png",alt:"blue",width:"50px",:height=>"50px")%>
+  				<%end%>
+  			</div>
+			
+  			<div class="button">
+  				<%= link_to gallery_path("purple") do %>
+  					<%= image_tag("buttons/button_purple.png",alt:"purple",width:"50px",:height=>"50px")%>
+  				<%end%>
+  			</div>
+							
+  		</div>
+			
+			<!-- ><div class="colours">
+				<div>
+
+			<div class="button">
+			<% Image::COLOURS.each do |colour| %>
+							<%= link_to(image_tag("buttons/button_#{colour}.png", {alt: colour, width: '50px', height: '50px'}), gallery_path(colour)) %>
+						<% end %>
+
+					</div>
+				</div>
+			</div> -->
+			
+			<section id="photostack-1" class="photostack photostack-start">
+
+				<div class="gallery">
+
+				<div>
+
+					<% Image.where(:colour => params[:colour]).each do |image| %>
+					  <figure>
+						<a class="photostack-img" href = "<%= image.picture_url %>" data-lightbox="<%= params[:colour] %>">
+							<%= image_tag(image.picture_url, :width => '250')%>
+						</a>
+
+						<!-- <figcaption>
+						 <h2 class="photostack-title"><%= image.name %></h2>
+						</figcaption> -->
+
+						<figcaption>
+						  <h2 class="photostack-title"><%= image.name %></h2>
+						</figcaption>
+
+					  </figure>
+					<% end %>			
+				</div>
+			</section>
+			
+		</div>
+		
+	
+	
+	<script>
+		window.photoStack = new Photostack( document.getElementById( 'photostack-1' ));
+	</script>

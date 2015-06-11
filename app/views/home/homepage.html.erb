@@ -1,0 +1,58 @@
+<div class="container">
+
+	
+	<%= render :partial=>"devise/shared/navbar" %>  
+
+	
+
+	
+	<div class="title">
+		<h1> Wellington Exposure </h1>
+	</div>
+	
+	<div class= "tag">
+		<h2> Explore the wonderful colours of Wellington </h2>
+	</div>
+	
+		<div class="colours">
+      
+			<div class="button">
+				<%= link_to gallery_path("red") do %>
+					<%= image_tag("buttons/button_red.png",alt:"red",width:"50px",:height=>"50px")%>
+				<%end%>
+			</div>
+			
+			<div class="button">
+				<%= link_to gallery_path("orange") do %>
+					<%= image_tag("buttons/button_orange.png",alt:"orange",width:"50px",:height=>"50px")%>
+				<%end%>
+			</div>
+			
+			<div class="button">
+				<%= link_to gallery_path("yellow") do %>
+					<%= image_tag("buttons/button_yellow.png",alt:"yellow",width:"50px",:height=>"50px")%>
+				<%end%>
+			</div>
+			
+			<div class="button">
+				<%= link_to gallery_path("green") do %>
+					<%= image_tag("buttons/button_green.png",alt:"green",width:"50px",:height=>"50px")%>
+				<%end%>
+			</div>
+			
+			<div class="button">
+				<%= link_to gallery_path("blue") do %>
+					<%= image_tag("buttons/button_blue.png",alt:"blue",width:"50px",:height=>"50px")%>
+				<%end%>
+			</div>
+			
+			<div class="button">
+				<%= link_to gallery_path("purple") do %>
+					<%= image_tag("buttons/button_purple.png",alt:"purple",width:"50px",:height=>"50px")%>
+				<%end%>
+			</div>
+							
+		</div>
+
+</div>
+

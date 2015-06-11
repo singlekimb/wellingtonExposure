@@ -1,0 +1,37 @@
+
+<%= render :partial=>"devise/shared/navbar" %> 
+
+<div class="title">
+	<h1>
+		Wellington Exposure
+	</h1>
+</div>
+
+
+
+<div class="uploaded">
+	<p id="notice"><%= notice %></p>
+
+	<p>
+		<strong>Name:</strong>
+		<%= @image.name %>
+	</p>
+
+	<p>
+		<strong>Description:</strong>
+		<%= @image.description %>
+	</p>
+
+	<p>
+		<strong>Picture:</strong>
+		<%=image_tag(@image.picture_url, :width =>500) if @image.picture.present?%>
+	</p>
+
+	<p>
+		<strong>Colour:</strong>
+		<%= @image.colour %>
+	</p>
+
+	<%= link_to 'Edit', edit_image_path(@image) %> |
+	<%= link_to 'Back', images_path %>
+</div>
