@@ -1,11 +1,13 @@
-Rails.application.routes.draw do
-
+Rails.application.routes.draw do 
+  
   get 'about/read'
+  post 'about/send_mail'
   
   resources :images 
   devise_for :users
   
   get 'home/homepage'
+  
   
   get 'galleries/:colour', to: 'galleries#gallery', as: 'gallery'
   
