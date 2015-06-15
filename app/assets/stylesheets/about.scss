@@ -1,3 +1,52 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Need to config mail_form with an email address, otherwise finished 
+
+#aboutcontent {
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+	width: 60%;
+	color: white;
+	font-family: 'Trebuchet MS', Arial, sans-serif;	
+}
+
+h3 {
+	font-size: 22px;
+	margin-top: 60px;
+}
+
+#about  {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 150%;
+}
+
+#contact {
+	font-size: 16px;
+	text-align: justify;
+}
+
+#contactform {
+	color: white;
+	width: 260px;
+}
+
+#name, #email, #message {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+}
+
+#message {
+	width: 250px;
+	height: 100px;	
+	font-size: 14px;
+}
+
+#send {
+	width: 50px;
+	font-size: 30px;
+}

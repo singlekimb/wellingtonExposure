@@ -12,5 +12,10 @@
  *
  */
 
-@import "scaffolds";
+// This is the order of what is loaded. The last will override the ones before.
 
+@import "core";
+@import "about";
+@import "scaffolds";
+@import "devise";
+@import "galleries";
