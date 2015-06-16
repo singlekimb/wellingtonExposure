@@ -10,8 +10,6 @@
 
 
 <div class="uploaded">
-	<p id="notice"><%= notice %></p>
-
 	<p>
 		<strong>Name:</strong>
 		<%= @image.name %>
@@ -23,8 +21,7 @@
 	</p>
 
 	<p>
-		<strong>Picture:</strong>
-		<%=image_tag(@image.picture_url, :width =>500) if @image.picture.present?%>
+		<%=image_tag(@image.picture_url, :class => "style_image", :width =>500) if @image.picture.present?%>
 	</p>
 
 	<p>
@@ -32,6 +29,6 @@
 		<%= @image.colour %>
 	</p>
 
-	<%= link_to 'Edit', edit_image_path(@image) %> |
+	<%= link_to 'Edit', edit_image_path(@image) %> <span class="bar">|</span>
 	<%= link_to 'Back', images_path %>
 </div>

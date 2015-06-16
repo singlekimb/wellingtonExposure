@@ -1,0 +1,30 @@
+<div class="container">
+
+	
+	<%= render :partial=>"devise/shared/navbar" %>  
+
+
+	<div class="title">
+		<h1> Wellington Exposure </h1>
+	</div>
+	
+	<div class= "tag">
+		<h2> Explore the wonderful colours of Wellington </h2>
+	</div>
+	
+
+	<div id="approval">
+		<h3>Users</h3>
+		<%= link_to "All Users", action: "index"%>
+		<%= link_to "Users awaiting approval", action: "index", approved: "false"%>
+		<table>
+			<% @users.each do |user|%>
+			<tr>
+				<td><%=user.email%></td>
+				<td><%=user.approved%></td>
+				<td><%=link_to "Edit",  edit_user_registration_path(user)%>
+			</tr>
+			<%end%>
+		</table>
+</div>
+

@@ -3,3 +3,85 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // unused so far
+.field {
+	width: 200px;
+	height: 60px;
+}
+
+.newEditImage {
+	margin: 0 auto;
+	width: 170px;
+	height: 300px;
+	margin-top: 20px;
+	font-size: 18px;
+	color: white;
+}
+
+.style_image {
+	max-width: 700px;
+	max-height: 400px;
+	width: auto;
+	height: auto;
+}
+
+.uploaded {
+	margin: 0 auto;
+	max-width: 700px;
+	width: auto;
+	
+}
+
+#showtable {
+	margin: 0 auto;
+	width: 805px;
+	margin-top: 30px;
+}
+
+
+a {
+	color: white;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+table, th, td {
+	color: white;
+}
+
+thead {
+	font-size: 22px;
+	text-align: left;
+	line-height: 50px;
+}
+
+
+#artist {
+	width: 90px;
+}
+.bar {
+	color: white;
+}
+
+input[type="text"] {
+    font-size:16px
+}
+
+input[type="file_field"] {
+    font-size:16px
+}
+
+input[type="select"] {
+    font-size:16px
+}
+
+select#image_colour {
+	width: 75px;
+	height: 22px;
+}
+input[type="submit"] {
+    font-size:16px
+}
+
+p {
+	color: white;
+}

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'about/read'
   post 'about/send_mail'
   
+  get 'users/index'
+  
   resources :images 
   devise_for :users
   
