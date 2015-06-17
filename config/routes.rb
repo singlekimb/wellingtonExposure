@@ -1,5 +1,6 @@
 Rails.application.routes.draw do 
   
+  devise_for :admins
   get 'about/read'
   post 'about/send_mail'
   

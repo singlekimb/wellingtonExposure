@@ -3,10 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
- end        
- 
-
-def active_for_authentication? 
+         
+  def active_for_authentication? 
     super && approved? 
   end 
 
@@ -16,8 +14,12 @@ def active_for_authentication?
     else 
       super # Use whatever other message 
     end 
-end
+  end
+  
+  def admin?
+  end
+  
+ end        
+ 
 
-def admin?
-    admin
-end
+
