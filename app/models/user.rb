@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :images, :dependent=>:destroy
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
@@ -17,6 +19,11 @@ class User < ActiveRecord::Base
   end
   
   def admin?
+    "admin" == self.role
+  end
+  
+  def editor?
+    "editor" == self.role
   end
   
  end        

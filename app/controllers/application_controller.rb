@@ -10,16 +10,17 @@ class ApplicationController < ActionController::Base
   end
   
   private
+  
   def current_user
     # checks for a User based on the session’s user id that was stored when they logged in, and stores result in an instance variable
     @current_user ||= ((User.find(session[:email]) if session[:email]) || User.new)
   end
   
   def admin?
-    current_user.admin
+    current_user.admin?
   end
   
   def authorize_admin
-    redirect_to root_path unless current_user.admin?
+    redirect_to root_path unless admin?
   end
 end

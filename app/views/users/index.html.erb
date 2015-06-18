@@ -1,5 +1,5 @@
 <div class="container">
-<>
+
 	
 	<%= render :partial=>"devise/shared/navbar" %>  
 
@@ -15,14 +15,16 @@
 
 	<div id="approval">
 		<h3>Users</h3>
-		<%= link_to "All Users", action: "index"%>
-		<%= link_to "Users awaiting approval", action: "index", approved: "false"%>
+		<%= link_to "All Users", action: "index"%> <br>
+		<%= link_to "Users awaiting approval", action: "index", approved: "false"%> <br>
 		<table>
 			<% @users.each do |user|%>
 			<tr>
 				<td><%=user.email%></td>
 				<td><%=user.approved%></td>
-				<td><%=link_to "Edit",  edit_user_registration_path(user)%>
+				<td><%=link_to "Edit",  edit_user_registration_path(user)%></td>
+				<td><%= link_to 'Destroy', user_registration_path(user), :confirm => 'Are you sure you want to destroy this account?', :method => :delete %></td>
+				
 			</tr>
 			<%end%>
 		</table>
