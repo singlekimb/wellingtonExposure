@@ -15,6 +15,7 @@ class ImagesController < ApplicationController
   # GET /images/new
   def new
     @image = Image.new
+    @image.user_id = current_user.id
   end
 
   # GET /images/1/edit
@@ -26,7 +27,8 @@ class ImagesController < ApplicationController
   # POST /images.json
   def create
     @image = Image.new(image_params)
-
+    @image.user_id = current_user.id
+    logger.info("GOT HERE #{current_user.inspect}")
     respond_to do |format|
       if @image.save
         format.html { redirect_to @image, notice: 'Image was successfully created.' }

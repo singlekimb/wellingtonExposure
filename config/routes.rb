@@ -3,12 +3,13 @@ Rails.application.routes.draw do
 
   get 'about/read'
   post 'about/send_mail'
+    
+  resources :images
   
-  get 'users/index'
-  
-  resources :images 
   devise_for :users
-  
+  get "users" =>"users#index"
+  match '/users/:id', :to => 'users#show', via: [:get, :post], :as => :user
+  match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
   get 'home/homepage'
   
   

@@ -17,6 +17,9 @@ class User < ActiveRecord::Base
       super # Use whatever other message 
     end 
   end
+  def user?
+    "user" == self.role
+  end
   
   def admin?
     "admin" == self.role
@@ -25,7 +28,6 @@ class User < ActiveRecord::Base
   def editor?
     "editor" == self.role
   end
-  
  end        
  
 

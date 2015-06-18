@@ -1,8 +1,6 @@
 <div class="container">
 
-	
 	<%= render :partial=>"devise/shared/navbar" %>  
-
 
 	<div class="title">
 		<h1> Wellington Exposure </h1>
@@ -15,16 +13,14 @@
 
 	<div id="approval">
 		<h3>Users</h3>
-		<%= link_to "All Users", action: "index"%> <br>
-		<%= link_to "Users awaiting approval", action: "index", approved: "false"%> <br>
+	<!--	<%= link_to "All Users", action: "index"%> <br>
+		<%= link_to "Users awaiting approval", action: "index", approved: "false"%> <br> -->
 		<table>
-			<% @users.each do |user|%>
+			<% @users.each do |terl|%>
 			<tr>
-				<td><%=user.email%></td>
-				<td><%=user.approved%></td>
-				<td><%=link_to "Edit",  edit_user_registration_path(user)%></td>
-				<td><%= link_to 'Destroy', user_registration_path(user), :confirm => 'Are you sure you want to destroy this account?', :method => :delete %></td>
-				
+				<td><%=terl.email%></td>
+				<td><%=terl.approved%></td>
+				<td><%=link_to 'Delete', admin_destroy_user_path(terl), method: :delete, data: { confirm: 'Are you sure?' } %></td>		
 			</tr>
 			<%end%>
 		</table>
