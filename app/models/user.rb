@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
       super # Use whatever other message 
     end 
   end
+  
   def user?
     "user" == self.role
   end

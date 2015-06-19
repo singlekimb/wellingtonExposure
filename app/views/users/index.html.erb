@@ -15,11 +15,13 @@
 		<h3>Users</h3>
 	<!--	<%= link_to "All Users", action: "index"%> <br>
 		<%= link_to "Users awaiting approval", action: "index", approved: "false"%> <br> -->
+		
 		<table>
 			<% @users.each do |terl|%>
 			<tr>
 				<td><%=terl.email%></td>
 				<td><%=terl.approved%></td>
+				<td><%=link_to 'admin_edit', edit_user_path(terl)%>
 				<td><%=link_to 'Delete', admin_destroy_user_path(terl), method: :delete, data: { confirm: 'Are you sure?' } %></td>		
 			</tr>
 			<%end%>

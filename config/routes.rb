@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   devise_for :users
   get "users" =>"users#index"
   match '/users/:id', :to => 'users#show', via: [:get, :post], :as => :user
-  match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
+  match 'users/:id', :to => 'users#destroy', :via => :delete, :as => :admin_destroy_user
+  match 'users/:id/edit', :to => 'users#edit', :via => [:get], :as => :edit_user
+  match 'users/:id/', :to => 'users#update', :via => [:patch, :put], :as => :update_user
   get 'home/homepage'
   
   
