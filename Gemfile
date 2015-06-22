@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'lightbox2-rails'
 gem 'carrierwave'
 gem 'devise'
 gem 'mail_form'

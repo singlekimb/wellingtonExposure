@@ -62,6 +62,7 @@
 			</div> -->
 			
 			<section id="photostack-1" class="photostack photostack-start">
+				<div>
 					<% Image.where(:colour => params[:colour]).each do |image| %>
 					  <figure>
 						<a class="photostack-img" href = "<%= image.picture_url %>" data-lightbox="<%= params[:colour] %>">
@@ -73,7 +74,8 @@
 						</figcaption> -->
 
 					  </figure>
-					<% end %>			
+					<% end %>
+				</div>		
 			</section>
 			
 			
