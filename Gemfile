@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'fog'
 gem 'lightbox2-rails'
 gem 'carrierwave'
 gem 'devise'
