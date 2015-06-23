@@ -17,6 +17,17 @@ body {
 
 }
 
+p.alert.alert-success {
+	margin-left: 20px;
+	opacity: 0.8;
+	position: absolute;
+}
+
+p.alert.alert-danger {
+	margin-left: 20px;
+	opacity: 0.8;
+	position: absolute;
+}
 
 .container2 {
 	position:relative;
@@ -33,11 +44,11 @@ body {
 	padding: 5px;
 	margin-left:-250px;
 	margin-top: 20%;
-
 }
 
 a {
 	text-decoration:none;
+	color: white;
 }
 
 
@@ -89,6 +100,7 @@ h1 {
 	opacity: 0.8;
 	z-index: 3;
 	margin-right: 15px;
+	margin-top: 10px;
 }
 
 

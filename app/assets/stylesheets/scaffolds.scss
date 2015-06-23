@@ -1,5 +1,6 @@
 form.new_user {
-	width: 170px;
+	width: 200px;
+	height: 500px;
 }
 
 div {
@@ -8,6 +9,7 @@ div {
 	padding: 3px;
 	line-height: 25px;
 	width: 200px;
+	overflow: visible;
 
   }
 }
@@ -24,6 +26,9 @@ div {
 	
 }
 
+#password_field {
+	height: 85px;
+}
 
 em {
 	font-size: 12px;
@@ -32,6 +37,7 @@ em {
 
 #error_explanation {
   width: 450px;
+  margin-top: 50px;
   ul li {
 	color: white;
     font-size: 16px;
@@ -44,4 +50,9 @@ em {
 	 visibility: hidden;
 	 font-size: 2px;	
 	}
+}
+
+.field_with_errors {
+	width: 1px;
+	height: 1px;
 }

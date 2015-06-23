@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// unused so far
 .field {
 	width: 200px;
 	height: 60px;
@@ -10,9 +9,9 @@
 
 .newEditImage {
 	margin: 0 auto;
-	width: 170px;
+	margin-top: 50px;
+	width: 180px;
 	height: 300px;
-	margin-top: 20px;
 	font-size: 18px;
 	color: white;
 }
@@ -38,10 +37,12 @@
 }
 
 
-a {
+.a_img {
 	color: white;
-	margin-left: 5px;
-	margin-top: 5px;
+	margin-left: 2px;
+	margin-top: 20px;
+	position: absolute;
+
 }
 
 table, th, td {

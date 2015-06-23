@@ -65,10 +65,10 @@
 				<div>
 					<% Image.where(:colour => params[:colour]).each do |image| %>
 					  <figure>
-						<a class="photostack-img" href = "<%= image.picture_url %>" data-lightbox="<%= params[:colour] %>">
-							<%= image_tag(image.picture_url, :width => '250')%>
+						<a class="photostack-img" href = "<%= image.picture_url %>" data-title="<%=image.description %> | <i><%= image.name %></i>" data-lightbox="<%= params[:colour] %>">
+							<%= image_tag(image.picture_url, :class => "style_image")%>
 						</a>
-
+	
 						<!-- <figcaption>
 						 <h2 class="photostack-title"><%= image.name %></h2>
 						</figcaption> -->

@@ -19,11 +19,11 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="field">
+  <div class="field" id="password_field">
     <%= f.label :password %>
     <% if @minimum_password_length %> <br>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %> <br/>
+    <% end %> <br>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
@@ -35,11 +35,11 @@
   <div class="actions">
     <%= f.submit "Sign up", :class => 'signup' %>
   </div>
-  
+ 
   <%= devise_error_messages! %>
   
 <% end %>
 
-
+</div>
 </div>
 

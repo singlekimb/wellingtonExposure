@@ -26,8 +26,8 @@
         <td><%= image.description %></td>
         <td><%= image.picture %></td>
         <td><%= image.colour %></td>
-        <td><%= link_to 'Show', image %></td>
-        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Show', image %> <span class="bar">|</span></td> 
+        <td><%= link_to 'Edit', edit_image_path(image) %> <span class="bar">|</span></td>
         <td><%= link_to 'Delete', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -36,6 +36,6 @@
 
 <br>
 
-<%= link_to 'New Image', new_image_path %>
+<%= link_to 'New Image', new_image_path, :class=>"a_img" %>
 
 </div>

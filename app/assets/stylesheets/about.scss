@@ -4,6 +4,13 @@
 
 // Need to config mail_form with an email address, otherwise finished 
 
+.other_bg {
+	background-image: image-url("background/nightHarbour1.png");
+	background-repeat: no-repeat;
+	background-size: 100%, 100%;
+	overflow:hidden;
+}
+
 #aboutcontent {
 	margin: 0 auto;
 	margin-top: 50px;
