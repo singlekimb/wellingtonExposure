@@ -23,7 +23,6 @@ div {
 #email, #password, #password_confirmation {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	
 }
 
 #password_field {
@@ -55,4 +54,9 @@ em {
 .field_with_errors {
 	width: 1px;
 	height: 1px;
+}
+
+.editUser {
+	width: 250px;
+	margin: 0 auto;
 }
