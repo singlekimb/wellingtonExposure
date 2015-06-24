@@ -45,6 +45,10 @@
 
 }
 
+table {
+	margin: 0 auto;
+}
+
 table, th, td {
 	color: white;
 }
@@ -59,9 +63,6 @@ thead {
 	padding-left: 15px;
 }
 
-#artist {
-	width: 90px;
-}
 .bar {
 	color: white;
 }
