@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'fog'
+
 gem 'lightbox2-rails'
 gem 'carrierwave'
 gem 'devise'
@@ -50,4 +50,5 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'fog'
 end
