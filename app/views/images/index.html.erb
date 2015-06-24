@@ -8,11 +8,11 @@
 </div>
 
 <div id=showtable>
-<table>
+<table cellpadding="20">
   <thead>
     <tr>
       <th id="artist">Artist</th>
-      <th>Picture</th>
+      <th>Description</th>
       <th>Colour</th>
       <th colspan="3"></th>
     </tr>
@@ -22,7 +22,7 @@
     <% @images.each do |image| %>
       <tr>
         <td><%= image.name %></td>
-        <td><%= image.picture %></td>
+        <td><%= image.description %></td>
         <td><%= image.colour %></td>
         <td><%= link_to 'Show', image %> <span class="bar">|</span></td> 
         <td><%= link_to 'Edit', edit_image_path(image) %> <span class="bar">|</span></td>
